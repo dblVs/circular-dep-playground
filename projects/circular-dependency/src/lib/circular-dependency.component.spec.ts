@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TranslationComponent } from './translation.component';
+import { CircularDependencyComponent } from './circular-dependency.component';
 
-describe('TranslationComponent', () => {
-  let component: TranslationComponent;
-  let fixture: ComponentFixture<TranslationComponent>;
+describe('CircularDependencyComponent', () => {
+  let component: CircularDependencyComponent;
+  let fixture: ComponentFixture<CircularDependencyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TranslationComponent ]
+      declarations: [ CircularDependencyComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TranslationComponent);
+    fixture = TestBed.createComponent(CircularDependencyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

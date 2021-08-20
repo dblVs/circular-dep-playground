@@ -1,25 +1,25 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "modules",
+  "newProjectRoot": "projects",
   "projects": {
-    "translation": {
+    "circular-dependency": {
       "projectType": "library",
-      "root": "modules/translation",
-      "sourceRoot": "modules/translation/src",
+      "root": "projects/circular-dependency",
+      "sourceRoot": "projects/circular-dependency/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "modules/translation/ng-package.json"
+            "project": "projects/circular-dependency/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "modules/translation/tsconfig.lib.prod.json"
+              "tsConfig": "projects/circular-dependency/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "modules/translation/tsconfig.lib.json"
+              "tsConfig": "projects/circular-dependency/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,13 +27,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "modules/translation/src/test.ts",
-            "tsConfig": "modules/translation/tsconfig.spec.json",
-            "karmaConfig": "modules/translation/karma.conf.js"
+            "main": "projects/circular-dependency/src/test.ts",
+            "tsConfig": "projects/circular-dependency/tsconfig.spec.json",
+            "karmaConfig": "projects/circular-dependency/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "translate"
+  "defaultProject": "circular-dependency"
 }
